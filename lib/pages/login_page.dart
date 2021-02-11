@@ -85,33 +85,33 @@ class _LoginPageState extends State<LoginPage> {
                         return null;
                       },
                     ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Material(
+                      borderRadius: BorderRadius.circular(50),
+                      color: Colors.deepPurple,
+                      child: InkWell(
+                        onTap: () => moveToHome(context),
+                        child: AnimatedContainer(
+                          duration: Duration(milliseconds: 80),
+                          height: 40,
+                          width: changeButton ? 50 : 120,
+                          alignment: Alignment.center,
+                          child: changeButton
+                              ? Icon(Icons.done, color: Colors.white)
+                              : Text(
+                                  "Login",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                        ),
+                      ),
+                    ),
                   ],
-                ),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              Material(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.deepPurple,
-                child: InkWell(
-                  onTap: () => moveToHome(context),
-                  child: AnimatedContainer(
-                    duration: Duration(milliseconds: 80),
-                    height: 40,
-                    width: changeButton ? 50 : 120,
-                    alignment: Alignment.center,
-                    child: changeButton
-                        ? Icon(Icons.done, color: Colors.white)
-                        : Text(
-                            "Login",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                          ),
-                  ),
                 ),
               ),
             ],
